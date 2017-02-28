@@ -35,9 +35,9 @@ for root, dir, files in os.walk("/Users/haozhang/Downloads"):
     for file in files:
         if root == "/Users/haozhang/Downloads":
             file_path = os.path.join(root, file)
-            if file.endswith(video_postfix):
+            if file_path.endswith(video_postfix):
                 move_file(file_path, target_video_dir)
-            if file.endswith(doc_postfix):
+            if file_path.endswith(doc_postfix):
                 move_file(file_path, target_doc_dir)
             if file_path.endswith("torrent"):
                 move_file(file_path, target_torrent_dir)
